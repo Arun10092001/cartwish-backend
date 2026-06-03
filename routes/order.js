@@ -38,7 +38,7 @@ router.post("/checkout", auth, async (req, res) => {
       user: req.user._id,
       products,
       total: cart.total,
-      status: "Shipped",
+      status: "Paid",
     });
 
     // Save order
