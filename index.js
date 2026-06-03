@@ -23,8 +23,16 @@ const cartRoutes = require("./routes/cart");
 const orderRoutes = require("./routes/order");
 
 // middlewares
-app.use(helmet());
-app.use(cors());
+app.use(
+  helmet({
+    crossOriginResourcePolicy: false,
+  }),
+);
+app.use(
+  cors({
+    origin: "*",
+  }),
+);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan("combined"));
