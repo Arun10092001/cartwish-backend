@@ -1,6 +1,6 @@
+const crypto = require("crypto"); // Must be before mongoose
 const mongoose = require("mongoose");
 const path = require("path");
-const crypto = require("crypto");
 
 require("dotenv").config({ path: path.resolve(__dirname, "../.env") });
 
